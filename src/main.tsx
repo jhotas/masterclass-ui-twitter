@@ -2,6 +2,7 @@ import './global.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import twitterLogo from './assets/logo-twitter.svg'
+import { House, MagnifyingGlass, Bell, EnvelopeSimple, ClipboardText, BookmarkSimple, User, DotsThreeCircle } from 'phosphor-react'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -10,14 +11,38 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <img className='logo' src={twitterLogo} alt="Logo" />
 
                 <nav className='main-navigation'>
-                    <a href="">Página Inicial</a>
-                    <a href="">Explorar</a>
-                    <a href="">Notificações</a>
-                    <a href="">Mensagens</a>
-                    <a href="">Listas</a>
-                    <a href="">Itens Salvos</a>
-                    <a href="">Perfil</a>
-                    <a href="">Mais</a>
+                    <a className='active' href="">
+                        <House weight='fill' />
+                        Página Inicial
+                    </a>
+                    <a href="">
+                        <MagnifyingGlass />
+                        Explorar
+                    </a>
+                    <a href="">
+                        <Bell />
+                        Notificações
+                    </a>
+                    <a href="">
+                        <EnvelopeSimple />
+                        Mensagens
+                    </a>
+                    <a href="">
+                        <ClipboardText />
+                        Listas
+                    </a>
+                    <a href="">
+                        <BookmarkSimple />
+                        Itens Salvos
+                    </a>
+                    <a href="">
+                        <User />
+                        Perfil
+                    </a>
+                    <a href="">
+                        <DotsThreeCircle />
+                        Mais
+                    </a>
                 </nav>
 
                 <button className='new-tweet' type='button'>
