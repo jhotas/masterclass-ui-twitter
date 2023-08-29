@@ -24,3 +24,63 @@ button {
 a {
     color: inherit;
 }
+
+/* Page: Timeline */
+
+.layout {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+    gap: 2rem;
+}
+
+.sidebar .logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.sidebar .new-tweet {
+    display: flex;
+    width: 100%;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: 0;
+    justify-content: center;
+    background: var(--twitter-blue);
+    border-radius: 9999px;
+    padding: 1rem;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.sidebar .new-tweet:hover {
+    background: #1a8cd8;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-navigation a {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    gap: 1.25rem;
+}
+
+.content {
+    border-left: 1px solid #ebeef0;
+    border-right: 1px solid #ebeef0;
+}
