@@ -2,7 +2,8 @@ import './global.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import twitterLogo from './assets/logo-twitter.svg'
-import { House, MagnifyingGlass, Bell, EnvelopeSimple, ClipboardText, BookmarkSimple, User, DotsThreeCircle, Sparkle } from 'phosphor-react'
+import { House, MagnifyingGlass, Bell, EnvelopeSimple, ClipboardText, BookmarkSimple, User, DotsThreeCircle, Sparkle, Image, Gif, ListBullets, SmileyWink, CalendarBlank, MapPin, DotsThree } from 'phosphor-react'
+import { Tweet } from './components/Tweet'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -48,6 +49,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <button className='new-tweet' type='button'>
                     Postar
                 </button>
+
+                <div className="profile">
+                    <img src="https://github.com/jhotas.png" />
+                    <div className="profile-text">
+                        <p>jhotas</p>
+                        <p>@jhootas_</p>
+                    </div>
+                    <DotsThree />
+                </div>
             </aside>
 
             <div className="content">
@@ -63,9 +73,21 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                             <textarea id='tweet' placeholder='O que está acontecendo?' />
                         </label>
 
-                        div.
-                        <button type='submit'>Postar</button>
+                        <div className="tweet-bar">
+                            <Image />
+                            <Gif />
+                            <ListBullets />
+                            <SmileyWink />
+                            <CalendarBlank />
+                            <MapPin />
+                            <button type='submit'>Postar</button>
+                        </div>
                     </form>
+
+                    <Tweet />
+                    <Tweet />
+                    <Tweet />
+                    <Tweet />
                 </main>
             </div>
 
