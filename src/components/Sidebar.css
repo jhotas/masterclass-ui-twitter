@@ -1,0 +1,81 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1.25rem 1.5rem;
+    gap: 2rem;
+}
+
+.sidebar .logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.sidebar .new-tweet {
+    display: flex;
+    width: 100%;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: 0;
+    justify-content: center;
+    background: var(--twitter-blue);
+    border-radius: 9999px;
+    padding: 1rem;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.sidebar .new-tweet:hover {
+    background: #1a8cd8;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-navigation a {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1.25rem;
+}
+
+.main-navigation a svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.active {
+    font-weight: 900;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16.5vh;
+}
+
+.profile-text {
+    margin-right: 5rem;
+}
+
+.profile-text p:nth-child(1) {
+    font-weight: 900;
+    line-height: 0.4rem;
+}
+
+.profile-text p:nth-child(2) {
+    font-weight: 400;
+    line-height: 0.4rem;
+}
+
+.profile img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+}

@@ -1,93 +1,33 @@
-import './global.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import twitterLogo from './assets/logo-twitter.svg'
-import { House, MagnifyingGlass, Bell, EnvelopeSimple, ClipboardText, BookmarkSimple, User, DotsThreeCircle, Sparkle, Image, Gif, ListBullets, SmileyWink, CalendarBlank, MapPin, DotsThree } from 'phosphor-react'
+
+import './global.css'
+
+import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header'
 import { Tweet } from './components/Tweet'
+import { NewTweet } from './components/NewTweet'
+
+const tweets = [
+    'Meu primeiro tweet',
+    'Teste',
+    'Deu certo!',
+]
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <div className='layout'>
-            <aside className='sidebar'>
-                <img className='logo' src={twitterLogo} alt="Logo" />
-
-                <nav className='main-navigation'>
-                    <a className='active' href="">
-                        <House weight='fill' />
-                        Página Inicial
-                    </a>
-                    <a href="">
-                        <MagnifyingGlass />
-                        Explorar
-                    </a>
-                    <a href="">
-                        <Bell />
-                        Notificações
-                    </a>
-                    <a href="">
-                        <EnvelopeSimple />
-                        Mensagens
-                    </a>
-                    <a href="">
-                        <ClipboardText />
-                        Listas
-                    </a>
-                    <a href="">
-                        <BookmarkSimple />
-                        Itens Salvos
-                    </a>
-                    <a href="">
-                        <User />
-                        Perfil
-                    </a>
-                    <a href="">
-                        <DotsThreeCircle />
-                        Mais
-                    </a>
-                </nav>
-
-                <button className='new-tweet' type='button'>
-                    Postar
-                </button>
-
-                <div className="profile">
-                    <img src="https://github.com/jhotas.png" />
-                    <div className="profile-text">
-                        <p>jhotas</p>
-                        <p>@jhootas_</p>
-                    </div>
-                    <DotsThree />
-                </div>
-            </aside>
+            <Sidebar />
 
             <div className="content">
                 <main className="timeline">
-                    <div className="timeline-header">
-                        Página Inicial
-                        <Sparkle />
-                    </div>
+                    <Header title='Página Inicial' />
 
-                    <form className="new-tweet-form">
-                        <label htmlFor="tweet">
-                            <img src="https://github.com/jhotas.png" alt="Foto de perfil" />
-                            <textarea id='tweet' placeholder='O que está acontecendo?' />
-                        </label>
+                    <NewTweet />
 
-                        <div className="tweet-bar">
-                            <Image />
-                            <Gif />
-                            <ListBullets />
-                            <SmileyWink />
-                            <CalendarBlank />
-                            <MapPin />
-                            <button type='submit'>Postar</button>
-                        </div>
-                    </form>
-
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
+                    {tweets.map(tweet => {
+                        return <Tweet key={tweet} content={tweet} />
+                    })}
                 </main>
             </div>
 
