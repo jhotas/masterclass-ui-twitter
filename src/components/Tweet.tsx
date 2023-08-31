@@ -8,7 +8,7 @@ interface TweetProps {
 export function Tweet(props: TweetProps) {
     return(
         <div className="tweet" style={{ borderRadius: 8 }}>
-            <img src="https://pbs.twimg.com/profile_images/1683544762123427865/JOMVrN3W_400x400.jpg" />
+            <img src="https://pbs.twimg.com/profile_images/1649140917465411588/RBT6D-aT_400x400.jpg" />
 
             <div className="tweet-content">
                 <div className="tweet-content-header">
